@@ -13,7 +13,7 @@ package io.koff.model
 case class User(id: UserId, generalInfo: GeneralInfo, billInfo: BillInfo)
 
 case class UserId(value: Long)
-case class GeneralInfo(email: Email, password: String, siteInfo: SiteInfo, isEmailConfirmed: Boolean = false)
+case class GeneralInfo(email: Email, password: String, siteInfo: SiteInfo, isEmailConfirmed: Boolean = false, phone: String, isPhoneConfirmed = false)
 case class SiteInfo(alias: String, avatarUrl: String, userRating: Double = 0.0d)
 case class Email(value: String)
 case class BillInfo(addresses: Seq[Address], name: Name)
@@ -32,7 +32,8 @@ object ProblemExample {
       siteInfo = SiteInfo(
         alias = "True_detectiv",
         avatarUrl = "http://example.com/smart_avatar"
-      )
+      ),
+      phone = "(+1)999-888-77-66"
     ),
 
     billInfo = BillInfo(
