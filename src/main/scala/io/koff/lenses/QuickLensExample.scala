@@ -8,7 +8,7 @@ import io.koff.model.{GeneralInfo, ProblemExample, User}
 object QuickLensExample {
   def main(args: Array[String]) {
     /**
-     * As we can see it is quite difficult to use scalaz.Lens
+     * Use of scalaz.Lens is quite difficult
      * but if we are not afraid to use macros in a project we might use `quicklens` instead.
      *
      * You have already seen a simple example for `quicklens` so let's go deeper and see what else `quicklens` can do

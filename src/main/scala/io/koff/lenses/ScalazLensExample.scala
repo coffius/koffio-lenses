@@ -61,6 +61,7 @@ object ScalazLensExample extends App{
   {
     val user = ProblemExample.user
 
+    //same operations
     println(userRatingLens1.set(user, 1).generalInfo.siteInfo.userRating)
     println(userRatingLens2.set(user, 2).generalInfo.siteInfo.userRating)
     println(userRatingLens3.set(user, 3).generalInfo.siteInfo.userRating)

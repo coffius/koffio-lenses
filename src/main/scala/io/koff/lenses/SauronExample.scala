@@ -8,7 +8,7 @@ import io.koff.model.{GeneralInfo, User, ProblemExample}
 object SauronExample {
   def main(args: Array[String]) {
     /**
-     * As it is said on the main page `Sauron` has been inspired by `quicklens`
+     * As it is said on the main page of `Sauron` repo it has been inspired by `quicklens`
      * but it has much simpler implementation and less number of features.
      * And also has additional dependency on `"org.scalamacros" % "paradise" % "2.1.0-M5"`
      */

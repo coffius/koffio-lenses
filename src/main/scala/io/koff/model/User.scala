@@ -108,7 +108,7 @@ object ProblemExample {
 
     /**
      * Now we have base understanding of lens purpose.
-     * In the next parts of article we will see how to use each of the libraries from the list
+     * In the next parts of this article we will see how to use each of the libraries from the list
      */
   }
 }
