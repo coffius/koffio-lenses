@@ -1,7 +1,6 @@
 package io.koff.lenses
 
-import com.softwaremill.quicklens._
-import io.koff.model.{GeneralInfo, User, ProblemExample}
+import io.koff.model.{GeneralInfo, ProblemExample, User}
 
 /**
  * Example of usage of quicklens
@@ -26,7 +25,8 @@ object QuickLensExample {
         .modify(_.generalInfo.siteInfo.userRating).using(_ + 1)
         .modify(_.billInfo.addresses.each.isConfirmed).using(_ => true)
 
-      println(updatedUser)
+      println(updatedUser.generalInfo.siteInfo.userRating)
+      println(updatedUser.billInfo.addresses)
     }
 
     /**
