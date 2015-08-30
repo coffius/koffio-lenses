@@ -51,13 +51,13 @@ object QuickLensExample {
     {
       import com.softwaremill.quicklens._
       //create lens
-      val generanInfoLens = modify(_:User)(_.generalInfo)
+      val generalInfoLens = modify(_:User)(_.generalInfo)
       val emailConfirmedLens = modify(_:GeneralInfo)(_.isEmailConfirmed)
       val phoneConfirmedLens = modify(_:GeneralInfo)(_.isPhoneConfirmed)
 
       //compose the lens
-      val confirmEmail = generanInfoLens.andThenModify(emailConfirmedLens)(_:User).using(_ => true)
-      val confirmPhone = generanInfoLens.andThenModify(phoneConfirmedLens)(_:User).using(_ => true)
+      val confirmEmail = generalInfoLens.andThenModify(emailConfirmedLens)(_:User).using(_ => true)
+      val confirmPhone = generalInfoLens.andThenModify(phoneConfirmedLens)(_:User).using(_ => true)
 
       val user = ProblemExample.user
       //compose the functions in order to make both changes at once
